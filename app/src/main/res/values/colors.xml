@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="stroke">#D3CFDC</color>
+    <color name="icon">#40866C</color>
+    <color name="socialite">#325B61</color>
+    <color name="login_bg">#4B366C</color>
+    <color name="profile_text_color">#4B366C</color>
+    <color name="black">#000000</color>
+    <color name="stats_color">#FD2A04</color>
+    <color name="timeline_name">#212121</color>
+    <color name="upload_text">#494949</color>
+    <color name="line">#EEEEEE</color>
+    <color name="retrict_bg">#40866C</color>
+    <color name="red">#FF0000</color>
+    <color name="notification_badge">#EF4F45</color>
+
+</resources>

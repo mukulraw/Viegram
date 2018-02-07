@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_layout"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/background"
+            android:layout_weight="1"
+            >
+            <RelativeLayout
+
+                android:id="@+id/back"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/backbutton_purple_96" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Ranking"
+                android:textSize="19dp"
+                android:textColor="@color/login_bg"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:background="#EEEEEE"
+            android:layout_height="1dp"></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:weightSum="3"
+            tools:ignore="DisableBaselineAlignment">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:id="@+id/leader"
+                android:background="@drawable/login_bg"
+                android:layout_weight="0.8"
+                tools:ignore="NestedWeights">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leaders"
+                    android:layout_centerInParent="true"
+                    android:textSize="14dp"
+                    android:id="@+id/leader_text"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:id="@+id/my_ranking"
+                android:background="@drawable/stats_bg"
+                android:layout_weight="0.95">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Ranking"
+                    android:layout_centerInParent="true"
+                    android:textSize="14dp"
+                    android:id="@+id/ranking_text"
+                    android:textColor="@color/login_bg"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:id="@+id/follower_ranking"
+                android:background="@drawable/stats_bg"
+                android:layout_weight="1.25">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Followers Ranking"
+                    android:layout_centerInParent="true"
+                    android:textSize="13dp"
+                    android:textAlignment="center"
+                    android:id="@+id/fllwr_text"
+                    android:textColor="@color/login_bg"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/ranking_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8.1"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v4.view.ViewPager>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:id="@+id/ranking_data"
+            android:layout_weight="8.1"></FrameLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+
+            android:layout_weight="8.1">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ranking_menu_click"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/menu_icon" />
+
+    <include
+        android:id="@+id/ranking_menu_open"
+        layout="@layout/design_menu"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"></include>
+</RelativeLayout>

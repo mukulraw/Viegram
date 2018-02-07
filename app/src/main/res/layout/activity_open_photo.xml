@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/header"
+        android:background="@drawable/background">
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/backbutton_purple_96"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/photo"
+            android:textColor="@color/login_bg"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/header"
+        android:background="#EEEEEE" />
+
+
+ <!--   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/background">
+
+            <RelativeLayout
+
+                android:id="@+id/back"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/backbutton_purple_96" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Photo"
+                android:textColor="@color/login_bg"
+                android:textSize="19dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/default_image" />
+
+            <TextView
+                android:id="@+id/username_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/time_text"
+                android:layout_toRightOf="@+id/user_image"
+                android:textColor="@color/timeline_name"
+                android:textSize="16dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username_text"
+                android:layout_toLeftOf="@+id/time_text"
+                android:layout_toRightOf="@+id/user_image"
+                android:textSize="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/post_options"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/menu_96" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@+id/post_options"
+                android:textSize="13dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5">
+
+            <com.afollestad.easyvideoplayer.EasyVideoPlayer
+                android:id="@+id/player"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+            <ImageView
+                android:id="@+id/post_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/load_progress"
+                android:visibility="gone"
+                android:layout_centerInParent="true"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:id="@+id/show_tag"></RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8">
+
+            <RelativeLayout
+                android:id="@+id/like"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/photo_like_view"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/like_96" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/comment"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/like">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/comment_96" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/repost"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/comment">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/repost_96" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/post_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:textColor="@color/timeline_name" />
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:layout_toLeftOf="@+id/post_points"
+                android:background="@drawable/points_96" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="7dp"
+            android:background="@color/line"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2">
+
+            <TextView
+                android:id="@+id/username_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/timeline_name"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/username_post"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </LinearLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_below="@+id/header"
+    android:id="@+id/scroll_view"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/default_image"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/username_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/time_text"
+                android:layout_toEndOf="@+id/user_image"
+                android:textStyle="bold"
+                android:textColor="@color/timeline_name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:id="@+id/location_text"
+                android:paddingTop="20dp"
+                android:layout_toStartOf="@+id/time_text"
+                android:layout_toEndOf="@+id/user_image"
+                android:layout_below="@+id/username_text"/>
+
+            <RelativeLayout
+                android:id="@+id/post_options"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/menu_96"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="7dp"
+                android:layout_toStartOf="@+id/post_options"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/post_layout">
+
+            <cn.jzvd.JZVideoPlayerStandard
+                android:id="@+id/player"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:id="@+id/image_error_text"
+                android:text="@string/image_doesn_t_exist"/>
+
+            <ImageView
+                android:id="@+id/post_image"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:id="@+id/show_tag" />
+
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:id="@+id/load_progress"
+                android:visibility="gone"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/like"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/photo_like_view"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/like_96" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/comment"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/like">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/comment_96" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/repost"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/comment">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/repost_96" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/post_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:textColor="@color/timeline_name" />
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:layout_toLeftOf="@+id/post_points"
+                android:background="@drawable/points_96" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="7dp"
+            android:background="@color/line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <TextView
+                android:id="@+id/username_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/timeline_name"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/caption"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/username_post"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+    <ImageView
+        android:id="@+id/open_menu_click"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/menu_icon"
+        tools:ignore="ContentDescription" />
+
+    <include
+        android:id="@+id/open_menu_open"
+        layout="@layout/design_menu"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

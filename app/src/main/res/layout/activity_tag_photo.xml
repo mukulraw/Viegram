@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/background"
+
+            >
+            <RelativeLayout
+
+                android:id="@+id/back"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/backbutton_purple_96" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Post a photo"
+                android:textSize="19dp"
+                android:textColor="@color/login_bg"/>
+            <Button
+                android:layout_width="75dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:text="Done"
+                android:id="@+id/done"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:background="@drawable/login_bg"
+                android:layout_height="30dp" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:background="#EEEEEE"
+            android:layout_height="1dp"></View>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:focusable="true"
+            android:visibility="gone"
+            android:id="@+id/search_friend_layout"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/search_purple_bg">
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Search People"
+                android:layout_centerVertical="true"
+                android:id="@+id/search_tag_friend"
+                android:textColorHint="@color/stroke"
+                android:layout_toLeftOf="@+id/search_friend"
+                android:layout_marginLeft="20dp"/>
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:id="@+id/search_friend"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/search_purple96"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tag_photo_layout"
+           >
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/tag_image"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"/>
+            <!--<ImageView-->
+                <!--android:layout_width="80dp"-->
+                <!--android:id="@+id/tagged_person"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:background="@drawable/who_this"-->
+                <!--android:layout_height="80dp" />-->
+        </RelativeLayout>
+
+        <RelativeLayout
+    android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"
+  >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:text="Tap photo to tag people"/>
+</RelativeLayout>
+
+
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/tag_menu_click"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/menu_icon" />
+
+    <include
+        android:id="@+id/tag_menu_open"
+        layout="@layout/design_menu"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"></include>
+</RelativeLayout>

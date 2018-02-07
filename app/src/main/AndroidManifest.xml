@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.relinns.viegram">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:name=".app.MyApplication"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        tools:replace="android:allowBackup"
+        android:fullBackupContent="false"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name=".Activity.Splash_screen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <receiver android:name=".uploadservice.events.UploadReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.relinns.viegram.uploadservice.broadcast.status" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".uploadservice.events.NotificationActionsReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.relinns.viegram.notification.action" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBWt5o7a5M15cJ7gjMrESLUAywRwuTitFg" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="7a14ce3c95760fd07a348f35eddfcc7eb75c1e47" />
+
+        <activity
+            android:name=".Activity.Login_Screen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Activity.Signup"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Activity.Stats"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Stats_Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Terms_service"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Edit_Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Change_Password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Ranking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Search"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.Options"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Another_user"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Timeline"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Forgot_password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Upload_photo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.Otp_Screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Update_Password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Comments"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.Notifications"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Follower_following"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.Viegram_works"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Search_location"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Another_follower_following"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.Follow_people"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity.Tag_photo"
+            android:screenOrientation="portrait" />
+
+
+        <activity android:name="com.theartofdev.edmodo.cropper.sample.CropResultActivity">
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <service android:name=".service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- <service -->
+        <!-- android:name="com.novoda.merlin.service.MerlinService" -->
+        <!-- android:exported="false" /> -->
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/app_icon" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/login_bg" />
+
+        <activity
+            android:name=".Activity.Open_photo"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.Post_points" />
+        <activity android:name=".Activity.Comment_like"></activity>
+    </application>
+
+</manifest>

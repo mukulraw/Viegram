@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/working_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/s1"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/rank_96" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/s1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Viegram position"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/world_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/stats_color"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/s1"
+                android:layout_marginLeft="23dp"
+                android:background="@color/login_bg"></View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/two"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/one">
+
+            <ImageView
+                android:id="@+id/s2"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/rank_96" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/s2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Position in your country"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/country_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/stats_color"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/s2"
+                android:layout_marginLeft="23dp"
+                android:background="@color/login_bg"></View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/three"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/two">
+
+            <ImageView
+                android:id="@+id/s3"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/rank_96" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/s3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Position amongst followers"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/follower_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/stats_color"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/s3"
+                android:layout_marginLeft="23dp"
+                android:background="@color/login_bg"></View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/four"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/three">
+
+            <ImageView
+                android:id="@+id/s4"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/rank_96" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/s4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Position amongst those you're following"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/following_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/stats_color"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:layout_alignParentStart="true">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

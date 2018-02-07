@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/one"
+        >
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/login_bg"
+            android:layout_marginLeft="23dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/leader_above_line"
+            android:layout_above="@id/s1"></RelativeLayout>
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:id="@+id/s1"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/rank_96"
+            android:layout_marginLeft="10dp"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/s1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
+                android:textColor="@color/stats_color"
+                android:id="@+id/leader_text"
+                android:layout_alignParentTop="true"
+                android:text="Viegram Leader"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="2dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/leader_image"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/default_image"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/leader_name"
+                    android:layout_toRightOf="@+id/leader_image"
+                    android:textSize="12dp"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/login_bg"
+            android:layout_marginLeft="23dp"
+            android:id="@+id/leader_line"
+            android:layout_below="@id/s1"></RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

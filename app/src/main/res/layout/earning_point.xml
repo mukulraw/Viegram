@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+
+        android:layout_height="match_parent"
+        android:id="@+id/working_layout"
+        android:layout_width="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/linear"
+        android:layout_height="wrap_content"
+        tools:ignore="DisableBaselineAlignment">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.65">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/stats_color"
+                android:textSize="14dp"
+                android:text="How to earn points"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.35">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/points"
+                android:textSize="14dp"
+                android:textColor="@color/stats_color"
+                android:text="Amount"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/linear"
+        android:id="@+id/point_list"></android.support.v7.widget.RecyclerView>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_below="@+id/point_list"
+    android:background="@color/line"></View>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/note"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/stats_color"
+        android:layout_below="@+id/point_list"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:text="@string/note"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/note"
+        ></View>
+
+</RelativeLayout>
+</ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/progress_layout"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>

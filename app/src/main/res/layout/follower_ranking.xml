@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/follower_ranking_layout"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@color/stats_color"
+    android:textSize="16dp"
+    android:id="@+id/p"
+    android:layout_margin="10dp"
+    android:text="Viegram Position"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/flwr_rnk_list"
+        android:layout_below="@+id/p"></android.support.v7.widget.RecyclerView>
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/no_follower_ranking"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/no_folwr"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/followers_240" />
+
+        <TextView
+            android:id="@+id/no_follower_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_folwr"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/empty"
+            android:textAlignment="center"
+            android:textColor="@color/login_bg"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/no_follower_ranking_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_follower_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/no_follower_ranking"
+            android:textAlignment="center"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/progress_layout">
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress"/>
+</RelativeLayout>
+</RelativeLayout>

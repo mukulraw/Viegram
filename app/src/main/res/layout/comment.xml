@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/posted_comment_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/comment_user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/default_image"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/comment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp" />
+
+    <RelativeLayout
+        android:id="@+id/like_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/comment_time"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/like_comnt_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/like_text"
+            android:background="@drawable/like_96" />
+
+
+        <TextView
+            android:id="@+id/like_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="2dp"
+            android:textAlignment="viewEnd"
+            android:layout_marginRight="2dp"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/comment_time"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/like_comment">
+
+        <TextView
+            android:id="@+id/liked_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textAlignment="viewEnd"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/point_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@+id/liked_points"
+            android:background="@drawable/points_96" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/comment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_toLeftOf="@+id/comment_time"
+        android:layout_toRightOf="@+id/comment_user"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/comment_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_name"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/comment_time"
+        android:layout_toRightOf="@+id/comment_user" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/comment_user"
+        android:layout_marginTop="10dp"
+        android:background="@color/line"></LinearLayout>
+</RelativeLayout>

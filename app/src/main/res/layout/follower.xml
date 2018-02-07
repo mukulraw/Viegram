@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/follower_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/default_image"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/follower_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/follow_button"
+        android:layout_toRightOf="@+id/follower_image"
+        android:textSize="15dp" />
+
+    <RelativeLayout
+        android:id="@+id/restrict"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/stats_bg">
+
+        <TextView
+            android:id="@+id/restrict_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:text="Restrict"
+            android:textSize="12dp" />
+        <ProgressBar
+            android:layout_width="18dp"
+            android:visibility="gone"
+            android:layout_margin="3dp"
+            android:id="@+id/following_progress"
+            android:layout_centerInParent="true"
+            android:layout_height="18dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/follow_button"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="7dp"
+        android:layout_toLeftOf="@+id/restrict"
+
+        android:background="@drawable/login_bg">
+        <ProgressBar
+            android:layout_width="18dp"
+            android:visibility="gone"
+            android:layout_margin="3dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/follower_progress"
+            android:layout_centerInParent="true"
+            android:layout_height="18dp" />
+        <TextView
+            android:id="@+id/follow_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:text="follows you"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/follower_image"
+        android:background="@color/line"></View>
+</RelativeLayout>

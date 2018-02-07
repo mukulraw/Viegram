@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:diagonal="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_layout"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:id="@+id/working_layout"
+        tools:context="com.relinns.viegram.Profile">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <com.github.florent37.diagonallayout.DiagonalLayout
+                    android:id="@+id/diagonalLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:elevation="10dp"
+                    android:paddingBottom="16dp"
+                    diagonal:diagonal_angle="7"
+                    diagonal:diagonal_direction="left"
+                    diagonal:diagonal_position="bottom">
+
+                    <ImageView
+                        android:id="@+id/edit_cover_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/profile_bg"
+                        android:scaleType="fitXY" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/back"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/backbutton_96" />
+                    </RelativeLayout>
+
+
+                </com.github.florent37.diagonallayout.DiagonalLayout>
+
+
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/default_image2" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+
+                <TextView
+                    android:id="@+id/cover_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:text="Change Cover Photo"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/stats_color"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/change_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="2dp"
+            android:text="Change Photo"
+            android:textColor="@color/stats_color"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.8"
+            android:weightSum="2"
+            tools:ignore="DisableBaselineAlignment">
+
+            <RelativeLayout
+                android:id="@+id/info"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/profile_button_bg">
+
+                <ImageView
+                    android:id="@+id/info_view"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/info_text"
+                    android:background="@drawable/info_96" />
+
+                <TextView
+                    android:id="@+id/info_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="info"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/line"></View>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1.05">
+
+            <ImageView
+                android:id="@+id/s1"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/username_96" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@id/s1"
+                android:background="@drawable/edit_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <com.relinns.viegram.util.EditText_cursor
+                    android:id="@+id/edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:hint="full name"
+                    android:singleLine="true"
+                    android:textColorHint="@color/stroke"
+                    android:textColor="@color/black"
+                    tools:ignore="Deprecated" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/s1"
+                android:layout_marginLeft="23dp"
+                android:background="@color/login_bg"></View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1.05">
+
+            <ImageView
+                android:id="@+id/s2"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/username_96" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@id/s2"
+                android:background="@drawable/edit_bg"
+                android:orientation="vertical">
+
+                <com.relinns.viegram.util.EditText_cursor
+                    android:id="@+id/edit_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@null"
+                    android:hint="username"
+                    android:singleLine="true"
+                    android:layout_toLeftOf="@+id/display_progress"
+                    android:textColorHint="@color/stroke"
+                    android:textColor="@color/black"
+                    tools:ignore="Deprecated" />
+                <ProgressBar
+                    android:id="@+id/display_progress"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/s2"
+                android:layout_marginLeft="23dp"
+                android:background="@color/login_bg"></View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1.05">
+
+            <ImageView
+                android:id="@+id/s3"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/link_96" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@id/s3"
+                android:background="@drawable/edit_bg"
+                android:orientation="vertical">
+
+                <com.relinns.viegram.util.EditText_cursor
+                    android:id="@+id/edit_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@null"
+                    android:textColorHint="@color/stroke"
+                    android:hint="www.viegram.com"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/s3"
+                android:layout_marginLeft="23dp"
+                android:background="@color/login_bg"></View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1.4">
+
+            <ImageView
+                android:id="@+id/s4"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/aboutme_96" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/s4"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/edit_bg"
+                    android:orientation="vertical">
+
+                    <com.relinns.viegram.util.EditText_cursor
+                        android:id="@+id/edit_bio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:background="@null"
+                        android:hint="About me"
+                        android:maxLines="2"
+                        android:textColorHint="@color/stroke"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/login_bg"
+                android:text="Save"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/edit_menu_click"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/menu_icon" />
+
+    <include
+        android:id="@+id/edit_menu_open"
+        layout="@layout/design_menu"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"></include>
+</RelativeLayout>

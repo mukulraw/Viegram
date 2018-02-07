@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/working_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/background">
+
+            <RelativeLayout
+
+                android:id="@+id/back"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/backbutton_purple_96" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/upload_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Post a Photo"
+                android:textColor="@color/login_bg"
+                android:textSize="19dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"></View>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8.1"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/upload_image_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/inital_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/image_video" />
+
+                    <ImageView
+                        android:id="@+id/upload_image_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_video"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/upload_edit_photo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/edit_96" />
+                    </RelativeLayout>
+
+                    <VideoView
+                        android:id="@+id/upload_video_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/play_video"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/play_video"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tag_people"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/upload_image_holder">
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/tag_96" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tag_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Tag People"
+                        android:textColor="@color/stroke"
+
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tag_people"
+                    android:background="@color/line"></View>
+
+                <LinearLayout
+                    android:id="@+id/add_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/tag_people">
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/location_96" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Add Location"
+                        android:textColor="@color/stroke"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/add_location"
+                    android:background="@color/line"></View>
+
+                <RelativeLayout
+                    android:id="@+id/restrict_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/add_location">
+
+                    <RelativeLayout
+                        android:id="@+id/re"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/restricted_96" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/re_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/re"
+                        android:text="Restricted "
+                        android:textColor="@color/upload_text"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/re_text"
+                        android:layout_toRightOf="@+id/re"
+                        android:text="Your restricted followers will not see this post"
+                        android:textColor="@color/stroke"
+                        android:textSize="11dp" />
+
+                    <RelativeLayout
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp">
+
+                        <CheckBox
+                            android:id="@+id/check"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/restrict_layout"
+                    android:background="@color/line"></View>
+
+                <LinearLayout
+                    android:id="@+id/caption_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/restrict_layout">
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/caption_96" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/add_caption_textbt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Add Caption"
+                            android:textAlignment="center"
+                            android:textColor="@color/login_bg"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/caption_layout"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <EditText
+                        android:id="@+id/caption_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:background="@null" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line"></View>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"></View>
+
+        <Button
+            android:id="@+id/upload_photo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/login_bg"
+            android:text="Post"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/upload_menu_click"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/menu_icon" />
+
+    <include
+        android:id="@+id/upload_menu_open"
+        layout="@layout/design_menu"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"></include>
+
+    <RelativeLayout
+        android:id="@+id/upload_progresslayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"
+        android:layout_toEndOf="@+id/progress_layout">
+
+        <com.github.lzyzsd.circleprogress.CircleProgress
+            android:id="@+id/circle_progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

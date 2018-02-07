@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:diagonal="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/working_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:weightSum="10"
+            tools:context="com.relinns.viegram.Profile">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3.5">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <com.github.florent37.diagonallayout.DiagonalLayout
+                        android:id="@+id/diagonalLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:elevation="10dp"
+                        android:paddingBottom="16dp"
+                        diagonal:diagonal_angle="7"
+                        diagonal:diagonal_direction="left"
+                        diagonal:diagonal_position="bottom">
+
+                        <ImageView
+                            android:id="@+id/profile_cover_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/default_cover_image"
+                            android:scaleType="fitXY" />
+
+                        <ProgressBar
+                            android:id="@+id/cover_progress"
+                            android:layout_width="24dp"
+                            android:visibility="gone"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+
+                                android:id="@+id/back"
+                                android:layout_width="60dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentLeft="true">
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/backbutton_96" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/edit"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/pencil_margin_bottom">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="26dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/edit_96" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+
+                    </com.github.florent37.diagonallayout.DiagonalLayout>
+
+
+                    <TextView
+                        android:id="@+id/my_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/default_image" />
+                    <ProgressBar
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:visibility="gone"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/profile_progress"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:weightSum="2"
+                tools:ignore="DisableBaselineAlignment">
+
+                <RelativeLayout
+                    android:id="@+id/info"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/profile_button_bg">
+
+                    <ImageView
+                        android:id="@+id/info_view"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toLeftOf="@+id/info_text"
+                        android:background="@drawable/info_96" />
+
+                    <TextView
+                        android:id="@+id/info_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="info"
+                        android:textColor="@color/white"
+                        android:textSize="17dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/photos"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stats_bg">
+
+                    <ImageView
+                        android:id="@+id/photo_view"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toLeftOf="@+id/photos_text"
+                        android:background="@drawable/photos_purple_96" />
+
+                    <TextView
+                        android:id="@+id/photos_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="photos"
+                        android:textColor="@color/profile_text_color"
+                        android:textSize="17dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"></View>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/profile_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            </android.support.v4.view.ViewPager>
+            <!--<FrameLayout-->
+            <!--android:id="@+id/profile_data"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="4.8"></FrameLayout>-->
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/profile_menu_click"
+            android:layout_width="35dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/menu_icon" />
+
+        <include
+            android:id="@+id/profile_menu_open"
+            layout="@layout/design_menu"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:layout_alignParentBottom="true"></include>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

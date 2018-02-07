@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:id="@+id/notification_swipeRefresh"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/notification_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/load_moreData"></android.support.v7.widget.RecyclerView>
+</android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:id="@+id/load_moreData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:id="@+id/progress_layout">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/progress"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/no_notification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/no_notify"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/notification_240" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_notify"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:lineSpacingExtra="5dp"
+            android:text="No notifications"
+            android:id="@+id/no_notification_text"
+            android:textAlignment="center"
+            android:textColor="@color/login_bg"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

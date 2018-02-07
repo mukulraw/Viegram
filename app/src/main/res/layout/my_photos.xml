@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/no_photos"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:id="@+id/no_folwr"
+            android:background="@drawable/profile_image_240"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/no_photos"
+            android:layout_below="@+id/no_folwr"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/private_account_layout"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/cntr"
+            android:background="@drawable/private_account240"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cntr"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="18dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#C6C6C6"
+            android:lineSpacingExtra="3dp"
+            android:text="This is a private account. \n Follow this user to see their photos"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/load_moreData"
+        android:id="@+id/my_photos"></android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/load_moreData"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</RelativeLayout>

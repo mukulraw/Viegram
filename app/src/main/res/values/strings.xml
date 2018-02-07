@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Viegram</string>
+
+    <string name="logo">Share photos, earn points, gain popularity and have fun competing against friends
+</string>
+
+    <string name="note">You lose the relevant amount of points when losing a follower and when a like on your photo or comment is retracted</string>
+    <string name="forgot">We just need your registered email address to send you a OTP verification code.</string>
+    <string name="otp">Please enter OTP sent to your email address</string>
+    <string name="private_data">Only people you approve can see your photos when your account is private</string>
+    <string name="restrict_pop">\n Restricting a follower will block them from seeing specific posts that you choose to exclude them from. \n \n Viegram will not notify  </string>
+    <string name="unfollow_pop">You will no longer see this users posts on your timeline. \n <font color='#4B366C'>___________</font>\n \n Are you sure you want to unfollow </string>
+    <string name="congratulations">You\'ve earned 2,500 points for signing up. \n Share your photos, earn points &amp; have fun! \n _________________ \n \n Expand the menu bar at the bottom of your screen to gain access to your account icons, and visit the options screen to invite others and learn exciting ways to earn points.</string>
+    <string name="no_follower">  Seems like you have no Followers. \n Invite friends to follow you.</string>
+    <string name="no_photos">No photos added to account!</string>
+    <string name="no_following">  Seems like you don\'t follow any people yet. \n Follow people to see their posts.</string>
+    <string name="no_posts">  Seems like there are no posts on your timeline. Follow people to see their posts.</string>
+    <string name="no_comment">Post a comment to start a discussion</string>
+    <string name="empty">It\'s empty here! \n</string>
+    <string name="no_following_posts">There are currently no posts available to display on your timeline</string>
+    <string name="no_follower_ranking">Seems like you have no Followers.</string>
+    <string name="invite_text">Hey there, follow me on Viegram and join the exciting photo gaming world. </string>
+    <string name="results">No results found</string>
+    <string name="no_comment_like">No Comments Liked</string>
+    <string name="no_reposts">No Reposts</string>
+    <string name="upload_video_done">Your Video has been posted.You\'ve earned 100 points.</string>
+    <string name="no_request">No requests</string>
+
+
+
+    <string name="upload_image_done">Your Image has been posted.You\'ve earned 100 points.</string>
+    <string name="upload_file_done">Your File  has been posted.You\'ve earned 100 points.</string>
+    <string name="password_validation">Password must contain one Capital letter,one special character and 8 characters long.</string>
+    <string name="no_comnt">No comments</string>
+    <string name="no_internet_msg">No internet connection</string>
+    <string name="retrofit_internet_error">Unable to resolve host \"www.viegram.com\": No address associated with hostname</string>
+    <string name="network_error">There is some Network problem. Please try again</string>
+    <string name="image_doesn_t_exist">Image doesn\'t exist.</string>
+
+    <string name="compressing">Compressing file</string>
+    <string name="permission_storage_need">WIthout storage permission this app cannot compress the video</string>
+    <string name="allow">Allow</string>
+    <string name="compress">Compress</string>
+
+
+    <string name="uploading">Uploaded [[UPLOADED_FILES]] of [[TOTAL_FILES]] at [[UPLOAD_RATE]] - [[PROGRESS]]</string>
+    <string name="upload_success">Upload completed successfully in [[ELAPSED_TIME]]</string>
+    <string name="upload_error">Error while uploading</string>
+    <string name="upload_cancelled">Upload has been cancelled</string>
+    <string name="multipart_upload">Viegram Uploading</string>
+    <string name="cancel_upload">Cancel</string>
+    <string name="photo">Photo</string>
+
+</resources>
